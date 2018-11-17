@@ -1,0 +1,5 @@
+Download credentials
+ 
+Client ID	
+762133818981-mk9ngjev72vqjqgs4mmvu2skc4uguuar.apps.googleusercontent.com
+Download this credential information in JSON format. This is always available for you on the credentials page.
