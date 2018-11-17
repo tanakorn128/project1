@@ -1,5 +1,5 @@
-<?php
-
+<!-- <?php
+require_once "index2.php";
 require_once "GoogleLoginx/login.php";
 ?>
 <html>
@@ -24,4 +24,6 @@ require_once "GoogleLoginx/login.php";
     </table>
 </body>
 </html>
+<?php
 
+?> -->
