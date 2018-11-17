@@ -8,7 +8,7 @@ $q ="SELECT * FROM googlelogin ";
 $result = mysqli_query($Con,$q);
 $row = mysqli_fetch_array($result)
 
- print_r($outname);
+
 ?>
 <?php
 
