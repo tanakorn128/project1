@@ -21,9 +21,9 @@
 <hr> <h1> ข้อมูลผู้ใช้งาน
 <table style = "width: 600px">
     <tr>
-        <th>Gmail ผู้ใช้งาน</th>
-        <th>ระดับผู้ใช้งาน</th>
-        <th>ลบ</th>
+        <th>Gmail </th>
+        <th>Name</th>
+        <th>Delete</th>
         
     </tr>  
         <?php
@@ -32,9 +32,9 @@
     <tr>
         <td><?php echo $row['gmail'];?></td>
         <td><?php echo $row['g_name'];?></td>
-
+        <td><a href ="delete_usergmail_from.php?gmail=<?php echo $row['gmail'];?>"> ลบ </a></td>
+        
     </tr>
-    
      </center>
     <?php
     }
@@ -42,9 +42,6 @@
         mysqli_close($Con);
     ?>
 </table>
-<form action="deleteshowuserG.php" method="POST">
-<input type="text"  name ="datax"/>
-        <input type="submit" name ="de" value="ลบ" />
 
 <hr>
 </body>
