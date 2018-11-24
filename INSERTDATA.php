@@ -14,10 +14,13 @@
             echo "กรุณากรอกก ระดับผู้ใช้ ก่อน";     
             exit();
         }
-       
+        $data_SIDs = $_POST['ID'];
+        $data_name = $_POST['Name']
+        $data_nickname = $_POST['nickname']
         $data_gmail = $_POST['gmail'];
+        $data_Tel = $_POST['Tel'];
         $data_LEVEL = $_POST['Level'];
-        $q ="INSERT INTO  user(gmail,Levels) VALUES ('$data_gmail','$data_LEVEL')";
+        $q ="INSERT INTO  user(SIDs,names,nicknames,gmail,Tel,Levels) VALUES ('$data_SID','$data_name','$data_nickname','$data_gmail','$data_Tel','$data_LEVELs')";
         $result = mysqli_query($Con,$q);
         if ($result){
             echo "เพิ่มข้อมูลแล้ว";
