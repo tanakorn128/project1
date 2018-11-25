@@ -18,7 +18,7 @@ $Topic = $_POST['n1'];
             $result = mysqli_query($Con,$q); 
             if ($result){
                 echo "เพิ่มข้อมูลแล้ว";
-                header("location: showuser.php");
+                header("location: +topic.php");
             }else{
                 echo "เพิ่มข้อมูลไม่ได้".mysqli_error($Con);
             }
