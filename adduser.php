@@ -1,13 +1,12 @@
 <?php> 
-
-
 session_start();
 ob_start();
 echo $_SESSION['Y0gmail']; // ผลลัพธ์คือแสดงข้อความ Hello 
 ?>
 <html>
+
     <META charset="UTF-8">
-    <head>
+   
             <style>
                     .button1 {
               display: inline-block;
@@ -32,7 +31,7 @@ echo $_SESSION['Y0gmail']; // ผลลัพธ์คือแสดงข้�
               transform: translateY(4px);
             }</style>
             <title>LOGIN</title>
-    </head>
+    
     <body style="background-color:pink;">
         <form action="INSERTDATA.php" method="POST">
                 <center>
@@ -48,8 +47,7 @@ echo $_SESSION['Y0gmail']; // ผลลัพธ์คือแสดงข้�
                 
         <input type="reset" name="Submit2" value="รีเซ็ต"class="button1">
         <input  type="button" name ="submit" value ="ย้อนกลับ" onclick='location.replace("showuser.php")' class="button1">
-    </center>
        </form>
-       
-    </body>
-</html>
+       </body>
+      </html> 
+   

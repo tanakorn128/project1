@@ -9,6 +9,7 @@ $row = mysqli_fetch_array($result)
 session_start();
 $g = $_SESSION['Y0gmail'];
 echo "<div style=\"font-size:18px;\">$g </div>";
+
 ?>
 <html>
 <head><title>member</title>

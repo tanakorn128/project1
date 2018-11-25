@@ -24,7 +24,7 @@ require_once "GoogleLoginx/login.php";
                 text-align: center;
                }
      </style></head>
-<body style="background-color:pink;">
+<body style="background-color:pink;" >
  <form>  
  <h3 align = 'right'><input type="button" onclick="window.location = '<?php echo $loginURL ?>';" value="Log In With Google"
  <?php
