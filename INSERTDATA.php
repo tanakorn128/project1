@@ -1,26 +1,48 @@
+<?php
+require "connect.php"
+
+?>
 <HTML>
     <HEAD>
+
         <TITLE></TITLE>
         <META charset="UTF-8">
     </HEAD>
-    <BODY>
+    <BODY> 
+        
         <?php
-        require 'connect.php';
+        if(empty($_POST['ID'])){
+            echo "กรุณากรอก ID ก่อน";     
+            exit();
+        }
+        if(empty($_POST['Name'])){
+            echo "กรุณากรอก Name ก่อน";     
+            exit();
+        }
+        if(empty($_POST['nickname'])){
+            echo "กรุณากรอก nickname ก่อน";     
+            exit();
+        }
         if(empty($_POST['gmail'])){
-            echo "กรุณากรอกก Gmail ก่อน";     
+            echo "กรุณากรอก gmail ก่อน";     
+            exit();
+        }
+        if(empty($_POST['Tel'])){
+            echo "กรุณากรอก Tel ก่อน";     
             exit();
         }
         if(empty($_POST['Level'])){
-            echo "กรุณากรอกก ระดับผู้ใช้ ก่อน";     
+            echo "กรุณากรอก ระดับผู้ใช้งาน ก่อน";     
             exit();
         }
-        $data_SIDs = $_POST['ID'];
-        $data_name = $_POST['Name']
-        $data_nickname = $_POST['nickname']
+        
+        $data_SID = $_POST['ID'];
+        $data_name = $_POST['Name'];
+        $data_nickname = $_POST['nickname'];
         $data_gmail = $_POST['gmail'];
         $data_Tel = $_POST['Tel'];
         $data_LEVEL = $_POST['Level'];
-        $q ="INSERT INTO  user(SIDs,names,nicknames,gmail,Tel,Levels) VALUES ('$data_SID','$data_name','$data_nickname','$data_gmail','$data_Tel','$data_LEVELs')";
+        $q ="INSERT INTO  user(SID,names,nicknames,gmail,Tel,Levels) VALUES ('$data_SID','$data_name','$data_nickname','$data_gmail','$data_Tel','$data_LEVEL')";
         $result = mysqli_query($Con,$q);
         if ($result){
             echo "เพิ่มข้อมูลแล้ว";
@@ -37,3 +59,5 @@
    </form>      
     </BODY>
 </HTML>
+
+  
