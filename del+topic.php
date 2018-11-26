@@ -72,7 +72,7 @@ echo $_SESSION['Y0gmail']; // ผลลัพธ์คือแสดงข้�
         <td><?php echo $row['detail'];?></td>
         <td><?php echo $row['db_start'];?></td>
         <td><?php echo $row['db_end'];?></td>
-        <td><?php echo $row['total'];?></td>
+        <td><?php echo $row['must_puy'];?></td>
         <td><a href ="delete_title_from.php?oder=<?php echo $row['oder'];?>"> ลบ </a></td>
         
     </tr>

@@ -11,8 +11,9 @@
       <body style="background-color:pink;">  
            <div class="container">  
                 <br />  
-                <br />  
-                <h2 align="center">กรอกข้อมูล</h2>  
+                <br />  &emsp;&emsp;
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<MARQUEE behavior=alternate direction=left scrollAmount=3 width="10%"><font face=Webdings>4</font><</MARQUEE><MARQUEE scrollAmount=1 direction=left width="2%">| | | | | | | | |</MARQUEE>กรอกข้อมูล<MARQUEE scrollAmount=1 direction=right width="2%">| | | | | | | | |</MARQUEE><MARQUEE behavior=alternate direction=right scrollAmount=3 width="10%"><font face=Webdings>3</font></MARQUEE>
+                  
                 <div class="form-group">  
                      <form action="expenditure.php" name="add_name" method="POST" id="add_name">  
                           <div class="table-responsive">  
@@ -131,14 +132,12 @@
                                             ปี    <input size=4 type=text name="end_year" maxlength=4>
                                             (เช่น 2561)</td>
                                      
-                               </table>                    
-                               <input type = button value = "ย้อนกลับ" onclick='location.replace("Homeuser0.php")' class="button1">
-                               <input type="submit" value="ตกลง"class="button1" class="button2">
-                               <input type = button value = "ลบ" onclick='location.replace("del+topic.php")' class="button1">
-                               
+                                                   
+
                                <input type="hidden" name="submit" id="submit" class="btn btn-info" value="Submit" />  
+                              
                           </div>  
-                     </form>  
+                      
                      
                 </div>  
            </div>  
@@ -146,3 +145,39 @@
  </html>  
  <html>
 
+ <?php
+ require "connect.php";
+ $q ="SELECT * FROM user ";
+ $result = mysqli_query($Con,$q);
+
+ ?>
+ <td>
+ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b>เลื่อกรหัสที่จะเก็บเงิน<br>
+ <?php
+
+ while ($row = mysqli_fetch_array($result)){
+?>
+<tr>
+<td align="left" valign="top"><label>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+<input  type="checkbox" name="UID[]" id="txtCheck" value="<?=$row['SID']?>"/>
+  </label></td>
+  <td align="left" valign="top"><?=$row['SID'];?> 
+  
+  </tr>
+     <?
+     }
+     ?>
+    </tr></tr>
+    </table>
+     <input type="hidden" name="submit[]" id="submit" class="btn btn-info" value="Submit" />
+     &emsp;&emsp;&emsp;&emsp;<br><br> <input type = button value = "ย้อนกลับ" onclick='location.replace("Homeuser0.php")' class="button1"></tr>
+     <tr><input type="submit" value="ตกลง"class="button1" onclick='location.replace("del+topic.php")' class="button2" ></tr>
+     <tr> <input type = button value = "ดูทั้งหมด" onclick='location.replace("del+topic.php")' class="button1"></tr>
+                               
+     <tr> <input type="hidden" name="submit" id="submit" class="btn btn-info" value="Submit" /></tr>  
+                               </form> <br><br><br>
+     
+
+     
+
+        
