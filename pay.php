@@ -1,60 +1,94 @@
 <?php
+require 'connect.php';
+
+$q ="SELECT * title user ";
+
+$result = mysqli_query($Con,$q);
 session_start();
 ob_start();
-echo $_SESSION['Y0gmail'] ;
+echo $_SESSION['Y0gmail'];
+echo "<div style=\"font-size:18px;\">$g </div>";
+
+    require 'connect.php';
+
+    $q ="SELECT * FROM title ";
+
+    $result = mysqli_query($Con,$q);
+
 ?>
-<HTML>
 
-<title>Pay</title>
-<BODY>
-<BODY bgcolor="#FFFAF0"></BODY>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
 
-<p>title 1</p>
-<center>
-<table width=90% style="border:3px dashed plum;" cellspacing="5" bgcolor="plum" cellpadding="5"><tr><td style="border:3px dashed white;" bgcolor="white"><a href="paydetail.HTML">หิวหมูกระทะ</a></td></tr></table><h3 align = 'right'><a href="paymes.HTML"><BUTTON>จ่าย</BUTTON></a></h3>
+<html>
+        <style>
+        .button1 {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;	
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
 
-</center>
+.button:hover {background-color: #3e8e41}
 
-
-</BODY>
-
-<BODY>
-<p>title 2</p>
-<center>
-<table width=90% style="border:3px dashed plum;" cellspacing="5" bgcolor="plum" cellpadding="5"><tr><td style="border:3px dashed white;" bgcolor="white"><a href="paydetail.HTML">หิวชาบู</a></td></tr></table><h3 align = 'right'><a href="paymes.HTML"><BUTTON>จ่าย</BUTTON></a></h3>
-</center>
-
-
-</BODY>
-
-<BODY>
-
-<p>title 3</p>
-
-<center>
-<table width=90% style="border:3px dashed plum;" cellspacing="5" bgcolor="plum" cellpadding="5"><tr><td style="border:3px dashed white;" bgcolor="white"><a href="paydetail.HTML">หิวหมูย่าง</a></td></tr></table><h3 align = 'right'><a href="paymes.HTML"><BUTTON>จ่าย</BUTTON></a></h3>
-</center>
-
-
-</BODY>
-<BODY>
-
-<p>title 4</p>
-
-<center>
-<table width=90% style="border:3px dashed plum;" cellspacing="5" bgcolor="plum" cellpadding="5"><tr><td style="border:3px dashed white;" bgcolor="white"><a href="paydetail.HTML">หิวหมูจุ่ม</a></td></tr></table> <h3 align = 'right'><a href="paymes.HTML"><BUTTON>จ่าย</BUTTON></a></h3>
-</center>
-
-
-</BODY>
-<BODY>
-
-<p>title 5</p>
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}</style>
+        <title>แสดงรายชื่อผู้ใช้</title>
+        <meta charset ="utf -8">
+        <style>
+            table,th,td{
+                border : 1px solid black;
+                border-collapse: collapse;
+            }
+        </style>
+<body style="background-color:pink;">
+</body>
+</html>
 
 <center>
-<table width=90% style="border:3px dashed plum;" cellspacing="5" bgcolor="plum" cellpadding="5"><tr><td style="border:3px dashed white;" bgcolor="white"><a href="paydetail.HTML">หิวหมมาล่า</a></td></tr></table><h3 align = 'right'><a href="paymes.HTML"><BUTTON>จ่าย</BUTTON></a></h3>
-</center>
+<hr> <h1> 
+<table style = "width: 800px">
+  
+        <?php
+                while ($row = mysqli_fetch_array($result)){
+                    
+        ?>
+        
+    <tr>
+    
+        <td><?php 
+        echo  $row['topic'];
+        ?></td>
+
+        
+    </tr>
+     </center>
+    <?php
+    }
+       
+        
+    ?>
+    
+</table>
+<h3 align = 'below'><input type="button" name ="submit" value ="กลับหน้าหลัก" onclick='location.replace("homeuser0.php")' class="button1">
 
 
-</BODY>
-</HTML>
+
+

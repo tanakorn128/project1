@@ -42,7 +42,7 @@ echo "<div style=\"font-size:18px;\">$g </div>";
 
     require 'connect.php';
 
-    $q ="SELECT * FROM user ";
+    $q ="SELECT * FROM title ";
 
     $result = mysqli_query($Con,$q);
     session_start();
@@ -53,12 +53,12 @@ echo $_SESSION['Y0gmail']; // ผลลัพธ์คือแสดงข้�
 <hr> <h1> ข้อมูลผู้ใช้งาน
 <table style = "width: 800px">
     <tr>
-        <th>รหัสนักศึกษา</th>
-        <th>ชื่อ</th>
-        <th>ชื่อเล่น</th>
-        <th>Gmail</th>
-        <th>เบอร์โทร</th>
-        <th>ระดับผู้ใช้งาน</th>
+        <th>oder</th>
+        <th>topic</th>
+        <th>detail</th>
+        <th>start</th>
+        <th>end</th>
+        <th>total</th>
         <th>ลบ</th>
         
     </tr>  
@@ -67,13 +67,13 @@ echo $_SESSION['Y0gmail']; // ผลลัพธ์คือแสดงข้�
         ?>
     <tr>
     
-        <td><?php echo $row['SID'];?></td>
-        <td><?php echo $row['names'];?></td>
-        <td><?php echo $row['nicknames'];?></td>
-        <td><?php echo $row['gmail'];?></td>
-        <td><?php echo $row['Tel'];?></td>
-        <td><?php echo $row['Levels'];?></td>
-        <td><a href ="delete_user_from.php?oder=<?php echo $row['gmail'];?>"> ลบ </a></td>
+        <td><?php echo $row['oder'];?></td>
+        <td><?php echo $row['topic'];?></td>
+        <td><?php echo $row['detail'];?></td>
+        <td><?php echo $row['db_start'];?></td>
+        <td><?php echo $row['db_end'];?></td>
+        <td><?php echo $row['total'];?></td>
+        <td><a href ="delete_title_from.php?oder=<?php echo $row['oder'];?>"> ลบ </a></td>
         
     </tr>
      </center>
@@ -83,7 +83,7 @@ echo $_SESSION['Y0gmail']; // ผลลัพธ์คือแสดงข้�
         mysqli_close($Con);
     ?>
 </table>
-<br><input type="button" name ="submit" value ="เพิ่ม" onclick='location.replace("adduser.php") 'class="button1">
+<br><input type="button" name ="submit" value ="เพิ่ม" onclick='location.replace("+topic.php") 'class="button1">
 <input  type="button" name ="submit" value ="กลับหน้าหลัก" onclick='location.replace("homeuser0.php")' class="button1">
 
 <hr>

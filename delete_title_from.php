@@ -1,10 +1,9 @@
-
 <meta charset="UTF-8">
 <?php
 require 'connect.php';
-$gmail = $_GET['oder'];
+$oder = $_GET['oder'];
 
-$q = "DELETE FROM user WHERE gmail ='$gmail'";
+$q = "DELETE FROM title WHERE oder ='$oder'";
 
 $result = mysqli_query($Con,$q);
 
@@ -15,4 +14,3 @@ else{
     echo "เกิดข้อผิดพลาดในการลบข้อมูล".mysqli_error($Con);
 }
 ?>
-

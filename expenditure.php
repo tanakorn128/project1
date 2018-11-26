@@ -14,7 +14,7 @@ $Topic = $_POST['n1'];
  $end_mon = $_POST['end_mon'];
  $end_year = $_POST['end_year'];
 
-            $q ="INSERT INTO  title(TID,topic,detail,must_puy,db_start,db_end) VALUES ('$TID','$Topic','$Detel','$must_puy','$start_day-$start_mon-$start_year','$start_day-$end_mon-$end_year')";
+            $q ="INSERT INTO  title(oder,topic,detail,must_puy,db_start,db_end) VALUES ('$TID','$Topic','$Detel','$must_puy','$start_day-$start_mon-$start_year','$start_day-$end_mon-$end_year')";
             $result = mysqli_query($Con,$q); 
             if ($result){
                 echo "เพิ่มข้อมูลแล้ว";
