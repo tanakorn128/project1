@@ -75,19 +75,19 @@ echo "<div style=\"font-size:18px;\">$g </div>";
     
         <td><?php 
         echo  $row['topic'];
-        ?></td>
-
         
+        ?></td>
+        <td><input type = button value = จ่าย onclick='location.replace("X.php")' >  </td>
     </tr>
      </center>
     <?php
-    }
+    }c
        
         
     ?>
     
 </table>
-<h3 align = 'below'><input type="button" name ="submit" value ="กลับหน้าหลัก" onclick='location.replace("homeuser0.php")' class="button1">
+<h3 align = 'below'><input type="button" name ="submit" value ="กลับหน้าหลัก" onclick='location.replace("homeuser1.php")' class="button1">
 
 
 

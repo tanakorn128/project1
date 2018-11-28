@@ -1,0 +1,18 @@
+html{margin:0px; padding:0px;width:100%;}
+body
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+}
+form{ margin:0px; padding:0px;}
+.pagination {margin: 0 auto;padding: 10px;font-size: 12px; text-align:right; float:right;}
+.pagination a{color: #555;}
+.pagination p {text-align:left;margin: 0;}
+.pagination p a:link,.pagination p a:visited,.pagination p a:hover,.pagination p a:active {text-decoration:none;
+background:#fff;border:1px solid #ddd;margin-right:1px;padding:2px 5px;}
+.pagination p a:hover {background-color: #55c5e9;color:#fff;}
+.pagination p span {text-decoration:none;background:#fff;border:1px solid #ccc;color:#B70D0D;margin-right:1px;padding:2px 5px;}
+.pagination .current {font-weight:bold;}
+
+.td_head{ text-align:center; padding:5px; font-weight:bold; background-color:#036; color:#FFF;}
+.td_row{ text-align:center; border-bottom:1px dotted #CCC; padding:5px;}

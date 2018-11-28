@@ -50,16 +50,13 @@ ob_start();
 echo $_SESSION['Y0gmail']; // ผลลัพธ์คือแสดงข้อความ Hello 
 ?>
 <center>
-<hr> <h1> ข้อมูลผู้ใช้งาน
+<hr> <h1> 
 <table style = "width: 800px">
     <tr>
         <th>oder</th>
         <th>topic</th>
-        <!-- <th>detail</th> -->
-        <th>start</th>
-        <th>end</th>
-        <th>total</th>
-        <th>ลบ</th>
+      
+      
         
     </tr>  
         <?php
@@ -69,22 +66,19 @@ echo $_SESSION['Y0gmail']; // ผลลัพธ์คือแสดงข้�
     
         <td><?php echo $row['oder'];?></td>
         <td><?php echo $row['topic'];?></td>
-        <!-- <td><?php echo $row['detail'];?></td> -->
-        <td><?php echo $row['db_start'];?></td>
-        <td><?php echo $row['db_end'];?></td>
-        <td><?php echo $row['must_puy'];?></td>
-        <td><a href ="delete_title_from.php?oder=<?php echo $row['oder'];?>"> ลบ </a></td>
         
     </tr>
      </center>
     <?php
-    }
+for ($i=1; $i <10 ; $i++) { 
+    # code...
+}
+ }
         mysqli_free_result($result);
         mysqli_close($Con);
     ?>
 </table>
-<br><input type="button" name ="submit" value ="เพิ่ม" onclick='location.replace("+topic.php") 'class="button1">
-<input  type="button" name ="submit" value ="กลับหน้าหลัก" onclick='location.replace("homeuser0.php")' class="button1">
+
 
 <hr>
 </body>
